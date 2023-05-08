@@ -34,7 +34,7 @@ func (b *Bot) HandleButtons(obj events.MessageNewObject) {
 	path := fmt.Sprintf("pkg/keyboards/%s.json", obj.Message.Text)
 
 	if obj.Message.Text == "Начать" || obj.Message.Text == "начать" {
-		sender(b.vk, b.messages.Choice, obj, DefaultPath)
+		sender(b.vk, b.messages.Start, obj, DefaultPath)
 	}
 
 	// Switch construction for different messages/buttons
