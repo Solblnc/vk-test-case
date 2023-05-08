@@ -1,0 +1,42 @@
+{
+  "one_time": false,
+  "inline": false,
+  "buttons": [
+    [
+      {
+        "action": {
+          "type": "text",
+          "label": "mad_lads",
+          "payload": ""
+        },
+        "color": "primary"
+      },
+      {
+        "action": {
+          "type": "text",
+          "label": "solcasino",
+          "payload": ""
+        },
+        "color": "primary"
+      }
+    ],
+    [
+      {
+        "action": {
+          "type": "text",
+          "label": "lily",
+          "payload": ""
+        },
+        "color": "primary"
+      },
+      {
+        "action": {
+          "type": "text",
+          "label": "okay_bears",
+          "payload": ""
+        },
+        "color": "primary"
+      }
+    ]
+  ]
+}

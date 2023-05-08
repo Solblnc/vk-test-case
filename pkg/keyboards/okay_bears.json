@@ -1,0 +1,24 @@
+{
+  "one_time": false,
+  "inline": false,
+  "buttons": [
+    [
+      {
+        "action": {
+          "type": "text",
+          "label": "Прайс цokay_bears",
+          "payload": ""
+        },
+        "color": "primary"
+      },
+      {
+        "action": {
+          "type": "text",
+          "label": "Объем okay_bears",
+          "payload": ""
+        },
+        "color": "primary"
+      }
+    ]
+  ]
+}
