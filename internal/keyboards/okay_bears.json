@@ -6,7 +6,7 @@
       {
         "action": {
           "type": "text",
-          "label": "Прайс цokay_bears",
+          "label": "Прайс okay_bears",
           "payload": ""
         },
         "color": "primary"

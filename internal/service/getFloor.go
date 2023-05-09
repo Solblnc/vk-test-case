@@ -1,7 +1,7 @@
 package service
 
 import (
-	"Vk-internship/pkg/models"
+	"Vk-internship/internal/models"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Vk-internship/pkg/config"
-	"Vk-internship/pkg/service"
+	"Vk-internship/internal/config"
+	"Vk-internship/internal/service"
 	"context"
 	"github.com/SevereCloud/vksdk/v2/api"
 	"github.com/SevereCloud/vksdk/v2/events"
