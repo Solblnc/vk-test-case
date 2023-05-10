@@ -3,10 +3,7 @@ package main
 import (
 	"Vk-internship/internal/config"
 	"Vk-internship/internal/service"
-	"context"
 	"github.com/SevereCloud/vksdk/v2/api"
-	"github.com/SevereCloud/vksdk/v2/events"
-	"github.com/SevereCloud/vksdk/v2/longpoll-bot"
 	"log"
 )
 
@@ -21,27 +18,13 @@ func main() {
 
 	vk := api.NewVK(token)
 
-	bot := service.NewBot(cfg.Responses, vk)
-
 	group, err := vk.GroupsGetByID(nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-	// Starting long pool
-	lp, err := longpoll.NewLongPoll(vk, group[0].ID)
-	if err != nil {
-		log.Fatal(err)
-	}
-	// listening for a message
-	lp.MessageNew(func(_ context.Context, obj events.MessageNewObject) {
+	bot := service.NewBot(cfg.Responses, vk, group)
 
-		log.Printf("%d: %s", obj.Message.PeerID, obj.Message.Text)
-
-		bot.HandleButtons(obj)
-	})
-
-	log.Println("Start Long Poll")
-	if err := lp.Run(); err != nil {
+	if err = bot.Start(); err != nil {
 		log.Fatal(err)
 	}
 }

@@ -1,9 +1,7 @@
 package service
 
 import (
-	"Vk-internship/internal/config"
 	"fmt"
-	"github.com/SevereCloud/vksdk/v2/api"
 	"github.com/SevereCloud/vksdk/v2/api/params"
 	"github.com/SevereCloud/vksdk/v2/events"
 	_ "github.com/SevereCloud/vksdk/v2/object"
@@ -21,16 +19,6 @@ const (
 )
 
 var m = params.NewMessagesSendBuilder()
-
-type Bot struct {
-	messages config.Responses
-	vk       *api.VK
-}
-
-// NewBot - returns a new bot
-func NewBot(messages config.Responses, vk *api.VK) *Bot {
-	return &Bot{messages: messages, vk: vk}
-}
 
 func (b *Bot) HandleButtons(obj events.MessageNewObject) {
 
